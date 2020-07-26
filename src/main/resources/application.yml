@@ -1,0 +1,26 @@
+server:
+  port: 9909
+#  connect PostgreSQL database
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/clean_code
+    username: clean_code
+    password: 123
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+#        org.hibernate.dialect.postgresSQL92Dialect
+upload:
+  folder: C:/folder/
+
+jwt:
+  token:
+    secret: jwtcleancode
+    validity: 864000000
